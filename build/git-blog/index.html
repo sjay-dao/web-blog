@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,24 +25,23 @@
 <body>
     
     <div class="container mx-auto px-4 py-8 shadow-slate-900">
-        <div class="fixed top-30 md:w-1/5 shadow-xl">
+        <div class="hidden md:fixed md:w-1/5 top-30  md:block shadow-xl">
             <h1 class="text-3xl font-bold mb-4">Detailed Post Title</h1>
             <ul class="space-y-2 w-full text-center font-bold">
                 <li class="w-full py-2 px-4 rounded-md text-blue-800 hover:bg-sky-400 hover:text-white">
-                    <a href="#section1" class="w-full hover:underline">GIT</a>
+                    <a href="#section1" class="w-full hover:underline scroll-smooth">GIT</a>
                 </li>
                 <li class="w-full py-2 px-4 rounded-md text-blue-800 hover:bg-sky-400 hover:text-white">
-                    <a href="#section2" class="w-full hover:underline"> Why Git?</a>
+                    <a href="#section2" class="w-full hover:underline scroll-smooth"> Why Git?</a>
                 </li>
                 <li class="w-full py-2 px-4 rounded-md text-blue-800 hover:bg-sky-400 hover:text-white">
-                    <a href="#section3" class="w-full hover:underline">How to Use Git</a>
+                    <a href="#section3" class="w-full hover:underline scroll-smooth">How to Use Git</a>
                 </li>
             </ul>
         </div>
-        <div class="flex flex-col md:flex-row shadow-zinc-950 ml-20">
-            <div class=" ml-96 md:w-2/3">
+        <div class="flex flex-col md:flex-row shadow-zinc-950 md:ml-20 sm:w-full">
+            <div class=" md:ml-96 md:w-2/3 sm:w-full">
                 <section id="section1" class="mb-60 mt-10 border-t border-gray-300">
-                    <div class="container mx-auto px-4 py-8">
                         <h1 class="text-3xl font-bold mb-4">Git Introduction</h1>
                         <p class="text-lg mb-4">
                             Git is a distributed version control system that tracks changes in computer files. It's primarily used for software development, but can also be applied to other projects that involve managing and tracking changes in files.
@@ -59,7 +58,7 @@
                         <p class="text-lg mb-4">
                             Version Control - Keeps track of changes.
                         </p>
-                    </div>
+                    
 
                     <h2 class="text-3xl font-bold mb-4">When was Git created?</h2>
                     <p class="text-lg mb-4">
@@ -162,18 +161,18 @@
                             <p class="text-lg mb-4">
                                 Navigate to your project directory in the terminal.
                             </p>
-                            <pre class="bg-gray-100 p-4 rounded-lg">git init
+                            <pre class="text-xs bg-gray-100 p-4 rounded-lg">git init
                             </pre>
                             <h4 class="text-lg font-bold mb-2">Commit</h4>
                             <p class="text-lg mb-4">
                                 Add your changes to the staging area:
                             </p>
-                            <pre class="bg-gray-100 p-4 rounded-lg"> git add .
+                            <pre class="text-xs bg-gray-100 p-4 rounded-lg"> git add .
                             </pre>
                             <p class="text-lg mb-4">
                                 Commit the changes to your local repository:
                             </p>
-                            <pre class="bg-gray-100 p-4 rounded-lg">git commit -m "Your commit message"
+                            <pre class="text:12px bg-gray-100 p-4 rounded-lg">git commit -m "Your commit message"
                             </pre>
                         </div>
                     </div>
@@ -195,13 +194,20 @@
                             <p class="text-lg mb-4">
                                 Push your local commits to the remote repository:
                             </p>
-                            <pre class="text-xs bg-gray-100 p-4 rounded-lg">git push -u origin main
+                            <pre class="text-xs bg-gray-100 p-4 rounded-lg">git push -u origin "branch-name"
                             </pre>
                             <h4 class="text-lg font-bold mb-2">Clone</h4>
                             <p class="text-lg mb-4">
                                 Clone the remote repository to your local machine:
                             </p>
                             <pre class="text-xs bg-gray-100 p-4 rounded-lg">git clone https://github.com/your-username/your-repository.git
+                            </pre>
+
+                            <h4 class="text-lg font-bold mb-2">Pull</h4>
+                            <p class="text-lg mb-4">
+                                Pull the remote repository to your local machine:
+                            </p>
+                            <pre class="text-xs bg-gray-100 p-4 rounded-lg">git pull https://github.com/your-username/your-repository.git "branch-name"
                             </pre>
                         </div>
                     </div>
