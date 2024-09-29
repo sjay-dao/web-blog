@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detailed Post Page</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<header class="bg-slate-500 shadow-md max-h-10">
+    <div class="container mx-auto px-4 pb-2">
+        <nav class="flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="./index.html" class="text-xl font-bold w-full">
+                    <img src="../img/2k-icon.png" class="h-full"/>
+                </a>
+            </div>
+            <div class="hidden md:flex items-center space-x-4 text-black font-bold">
+                <a href="../index.html" class=" hover:text-gray-900">Home</a>
+                <a href="./index.html" class=" hover:text-red-700">Blog</a>
+                <a href="#contact" class=" hover:text-gray-900">Contact</a>
+            </div>
+        </nav>
+    </div>
+</header>
+<body>
+    
+    <div class="container mx-auto px-4 py-8 shadow-slate-900">
+        <div class="fixed top-30 md:w-1/5 shadow-xl">
+            <h1 class="text-3xl font-bold mb-4">Detailed Post Title</h1>
+            <ul class="space-y-2 w-full text-center font-bold">
+                <li class="w-full py-2 px-4 rounded-md text-blue-800 hover:bg-sky-400 hover:text-white">
+                    <a href="#section1" class="w-full hover:underline">GIT</a>
+                </li>
+                <li class="w-full py-2 px-4 rounded-md text-blue-800 hover:bg-sky-400 hover:text-white">
+                    <a href="#section2" class="w-full hover:underline"> Why Git?</a>
+                </li>
+                <li class="w-full py-2 px-4 rounded-md text-blue-800 hover:bg-sky-400 hover:text-white">
+                    <a href="#section3" class="w-full hover:underline">How to Use Git</a>
+                </li>
+            </ul>
+        </div>
+        <div class="flex flex-col md:flex-row shadow-zinc-950 ml-20">
+            <div class=" ml-96 md:w-2/3">
+                <section id="section1" class="mb-60 mt-10 border-t border-gray-300">
+                    <div class="container mx-auto px-4 py-8">
+                        <h1 class="text-3xl font-bold mb-4">Git Introduction</h1>
+                        <p class="text-lg mb-4">
+                            Git is a distributed version control system that tracks changes in computer files. It's primarily used for software development, but can also be applied to other projects that involve managing and tracking changes in files.
+                        </p>
+                        <p class="text-lg mb-4">
+                            The name "Git" is derived from the word "Linus," a reference to its creator, Linus Torvalds, who is also the creator of the Linux operating system.
+                        </p>
+                        <p class="text-lg mb-4">
+                            Git is built using C.
+                        </p>
+                        <p class="text-lg mb-4">
+                            Git is like a digital backpack for your projects(Files). It stores all your files, changes, and versions, allowing you to carry them around and access them whenever you need. Inside your backpack is a magical compartment.
+                        </p>
+                        <p class="text-lg mb-4">
+                            Version Control - Keeps track of changes.
+                        </p>
+                    </div>
+
+                    <h2 class="text-3xl font-bold mb-4">When was Git created?</h2>
+                    <p class="text-lg mb-4">
+                        Git was created by Linus Torvalds in 2005. It was originally designed to manage the development of the Linux kernel, but it quickly gained popularity and became a widely used version control system.
+                    </p>
+                    <p class="text-lg mb-7">
+                        The name "Git" is derived from the word "Linus," a reference to its creator, Linus Torvalds, who is also the creator of the Linux operating system.
+                    </p>
+
+                    <h2 class="text-3xl font-bold mb-4">Where is GIT mainly used?</h2>
+                    <ul class="text-lg list-disc ml-10 space-y-2">
+                        <li>Software development</li>
+                        <li>Data analysis</li>
+                        <li>Writing and editing</li>
+                        <li>Web development</li>
+                        <li>Design</li>
+                    </ul>
+                </section>
+                <section id="section2" class="mb-60 mt-10 border-t border-gray-300">
+                    <h2 class="text-5xl font-bold mb-4">Why use Git instead of just a computer?</h2>
+                    <div  class="mb-4">
+                        <h3 class="text-xl font-bold mb-2">Collaboration (Shared Backpack)</h3>
+                        <ul class="text-lg space-y-2">
+                            <li>
+                                <span class="font-bold">Computer:</span> Multiple people can access the same files, but it's difficult to merge changes.
+                            </li>
+                            <li>
+                                <span class="font-bold">Git:</span> Multiple people can work on the same project simultaneously, and Git helps merge their changes and resolve conflicts.
+                            </li>
+                        </ul>
+                    </div>
+                    <div  class="mb-4">
+                        <h3 class="text-xl font-bold mb-2">Version Control (Time Machine)</h3>
+                        <ul class="text-lg space-y-2">
+                            <li>
+                                <span class="font-bold">Computer:</span> You save multiple versions of your files with different names.
+                            </li>
+                            <li>
+                                <span class="font-bold">Git:</span> Git automatically saves snapshots of your project at different points in time, so you can easily go back to a previous version.
+                            </li>
+                        </ul>
+                        <h4 class="text-lg font-bold mb-2">Time Travel - Restore Previous Version</h4>
+                        <ul class="text-lg space-y-2">
+                            <li>File History</li>
+                        </ul>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="text-xl font-bold mb-2">Distributed Nature (Multiple Backpacks)</h3>
+                        <ul class="text-lg space-y-2">
+                            <li>
+                                <span class="font-bold">Computer:</span> You have a single copy of your files.
+                            </li>
+                            <li>
+                                <span class="font-bold">Git:</span> Each person working on the project has a complete copy of the project, making it more reliable and faster to work with.
+                            </li>
+                        </ul>
+                        <p class="text-lg">All the files are cloned.</p>
+                    </div>
+                    <div  class="mb-4">
+                        <h3 class="text-xl font-bold mb-2">Branching and Merging (Multiple Pockets)</h3>
+                        <ul class="text-lg space-y-2">
+                            <li>
+                                <span class="font-bold">Computer:</span> You can create copies of your project for different experiments.
+                            </li>
+                            <li>
+                                <span class="font-bold">Git:</span> Git allows you to create separate branches (like pockets) for different features or experiments. You can then merge these branches back into the main project when you're ready.
+                            </li>
+                        </ul>
+                        <p class="text-lg">Experimenting is easier. You can rectify your past. It is like going back in time and making changes on it.</p>
+                    </div>
+                    <h2 class="text-2xl font-bold mb-4">Git aids in</h2>
+                    <ul class="text-lg list-disc space-y-2 ml-10">
+                        <li>Loss of Work</li>
+                        <li>Difficulty Collaborating</li>
+                        <li>Lack of History</li>
+                        <li>Increased Risk of Errors</li>
+                        <li>Reduced Efficiency</li>
+                    </ul>
+                </section> 
+                <section id="section3" class="mb-4">
+                    <h2 class="text-6xl font-bold mb-20">How to Use Git</h2>
+                    
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/3 mb-10">
+                            <h3 class="text-xl font-bold mb-2">Installation</h3>
+                        </div>
+                        <div class="md:w-2/3">
+                            <ul class="list-disc space-y-2"></ul>
+                                <li>Download Git from the official website (https://git-scm.com/download)</li>
+                                <li>Follow the installation instructions for your operating system.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/3">
+                            <h3 class="text-xl font-bold mb-2">Applying Locally</h3>
+                        </div>
+                        <div class="md:w-2/3">
+                            <h4 class="text-lg font-bold mb-2">Git Initialization</h4>
+                            <p class="text-lg mb-4">
+                                Navigate to your project directory in the terminal.
+                            </p>
+                            <pre class="bg-gray-100 p-4 rounded-lg">git init
+                            </pre>
+                            <h4 class="text-lg font-bold mb-2">Commit</h4>
+                            <p class="text-lg mb-4">
+                                Add your changes to the staging area:
+                            </p>
+                            <pre class="bg-gray-100 p-4 rounded-lg"> git add .
+                            </pre>
+                            <p class="text-lg mb-4">
+                                Commit the changes to your local repository:
+                            </p>
+                            <pre class="bg-gray-100 p-4 rounded-lg">git commit -m "Your commit message"
+                            </pre>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row mt-20">
+                        <div class="md:w-1/3">
+                            <h3 class="text-xl font-bold mb-2">Applying Remotely</h3>
+                        </div>
+                        <div class="md:w-2/3">
+                            <h4 class="text-lg font-bold mb-2">Use GitHub</h4>
+                            <p class="text-lg mb-4">
+                                Create a new repository on GitHub.
+                            </p>
+                            <h4 class="text-lg font-bold mb-2">Push to GitHub</h4>
+                            <p class="text-lg mb-4">
+                                Add the remote repository to your local repository:
+                            </p>
+                            <pre class="text-xs white-space-pre-wrap bg-gray-100 p-4 rounded-lg">git remote add origin https://github.com/your-username/your-repository.git
+                            </pre>
+                            <p class="text-lg mb-4">
+                                Push your local commits to the remote repository:
+                            </p>
+                            <pre class="text-xs bg-gray-100 p-4 rounded-lg">git push -u origin main
+                            </pre>
+                            <h4 class="text-lg font-bold mb-2">Clone</h4>
+                            <p class="text-lg mb-4">
+                                Clone the remote repository to your local machine:
+                            </p>
+                            <pre class="text-xs bg-gray-100 p-4 rounded-lg">git clone https://github.com/your-username/your-repository.git
+                            </pre>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
