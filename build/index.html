@@ -4,143 +4,340 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Landing Page</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .blog-card {
+        transition: all 0.3s ease;
+      }
+      .blog-card:hover {
+        transform: translateY(-3px);
+      }
+      .image-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        overflow: hidden;
+      }
+      .image-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
   </head>
-  <header class="bg-slate-500 shadow-md max-h-10">
-    <div class="container mx-auto px-4 pb-2">
-      <nav class="flex justify-between items-center">
-        <div class="flex items-center">
-          <a href="./index.html" class="text-xl font-bold w-full">
-            <img src="./img/2k-icon.png" class="h-full" />
-          </a>
-        </div>
-        <div class="hidden md:flex items-center space-x-4 text-black font-bold">
-          <a href="./index.html" class="hover:text-gray-900">Home</a>
-          <a href="./git-blog/index.html" class="hover:text-red-700">Blog</a>
-          <a href="#contact" class="hover:text-gray-900">Contact</a>
-        </div>
-      </nav>
-    </div>
-  </header>
-  <body class="text-lg bg-gray-100">
-    <div class="container mx-auto px-4 py-8">
-      <div class="flex flex-col md:flex-row">
-        <div class="md:w-1/2">
-          <div class="bg-white rounded-lg shadow-md p-6">
-            <h2 class="text-2xl font-bold mb-4">Git and GITHUB</h2>
-            <img
-              src="./img/git with github logo.png"
-              alt="Latest Post Image"
-              class="w-full h-64 object-cover rounded-lg mb-4"
-            />
-            <p class="text-gray-700 mb-4">
-              Explore the capability of Version Control System in your projects
-            </p>
-            <a
-              href="./git-blog/index.html"
-              class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
-              >Read More</a
-            >
+  <body class="bg-gray-100">
+    <header class="bg-slate-500 shadow-md">
+      <div class="container mx-auto px-4 py-3">
+        <nav class="flex justify-between items-center">
+          <div class="flex items-center">
+            <a href="./index.html" class="text-xl font-bold">
+              <img src="./img/2k-icon.png" class="h-8" alt="Site Logo" />
+            </a>
+          </div>
+          <div class="hidden md:flex items-center space-x-6 text-black font-bold">
+            <a href="./index.html" class="hover:text-gray-900 transition-colors">Home</a>
+            <a href="./git-blog/index.html" class="hover:text-red-700 transition-colors">Blog</a>
+            <a href="#contact" class="hover:text-gray-900 transition-colors">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+      <!-- Featured Section -->
+      <div class="flex flex-col lg:flex-row gap-8 mb-12">
+        <!-- Main Featured Post -->
+        <div class="lg:w-2/3">
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden blog-card h-full">
+            <div class="image-container">
+              <img
+                src="./img/git with github logo.png"
+                alt="Git and GitHub"
+                class="w-full"
+              />
+            </div>
+            <div class="p-6">
+              <h2 class="text-2xl font-bold mb-3 text-gray-800">Git and GitHub</h2>
+              <p class="text-gray-700 mb-4">
+                Master version control to streamline your development workflow and collaborate effectively.
+              </p>
+              <a
+                href="./git-blog/index.html"
+                class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+              >
+                Read More →
+              </a>
+            </div>
           </div>
         </div>
 
-        <div class="md:w-1/2 mt-6 mx-2 md:mt-0">
-          <div class="grid grid-cols-3 gap-4">
-            <a href="./git-blog/llama4_blog.html" class="block"> <!-- Added 'block' for proper sizing -->
-              <div class="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow">
-                <h3 class="text-xs font-semibold mb-2">
-                  LLaMA 4: The Future of Open AI
-                </h3>
-                <img
-                  src="./img/llama4.jpeg"
-                  alt="LLaMA 4 AI Model"
-                  class="w-full h-24 object-cover rounded-lg mb-2"
-                />
-                <p class="text-xs text-gray-700">
-                  Smarter, faster, and open-source—experience next-gen AI.
-                </p>
-              </div>
-            </a>
-            <div class="bg-white rounded-lg shadow-md p-4">
-              <h3 class="text-xs font-semibold mb-2">
-                Tailwind CSS: Design to the max level
-              </h3>
+        <!-- Secondary Featured Post -->
+        <div class="lg:w-1/3">
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden h-full blog-card">
+            <div class="image-container">
               <img
-                src="./img/tailwind.jpg"
-                alt="Previous Post Image 1"
-                class="w-full h-24 object-cover rounded-lg mb-2"
+                src="./img/LifeVsGameFeature.jpeg"
+                alt="Games vs Reality"
+                class="w-full"
               />
-              <p class="text-xs text-gray-700">
-                Capture the beauty of tailwind just one click away
-              </p>
             </div>
-            <div class="bg-white rounded-lg shadow-md p-4">
-              <h3 class="text-xs font-semibold mb-2">
-                HTML AND CSS: The Grand parents of Frontend
-              </h3>
-              <img
-                src="./img/html-css.jpg"
-                alt="Previous Post Image 1"
-                class="w-full h-24 object-cover rounded-lg mb-2"
-              />
-              <p class="text-xs text-gray-700">
-                It's important to study the basics or foundation of everything
+            <div class="p-6">
+              <span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full mb-2">Popular</span>
+              <h2 class="text-xl font-bold mb-3 text-gray-800">Why Real Life Bores You (But Games Don't)</h2>
+              <p class="text-gray-700 text-sm mb-4">
+                The neurochemical trap that makes digital experiences more compelling than reality.
               </p>
-            </div>
-            <div class="bg-white rounded-lg shadow-md p-4">
-              <h3 class="text-xs font-semibold mb-2">
-                Javascript: Marvelous Legacy
-              </h3>
-              <img
-                src="./img/JavaScript.png"
-                alt="Previous Post Image 1"
-                class="w-full h-24 object-cover rounded-lg mb-2"
-              />
-              <p class="text-xs text-gray-700">
-                Understand the significance of Javascript in our modern frontend
-                designs
-              </p>
-            </div>
-            <div class="bg-white rounded-lg shadow-md p-4">
-              <h3 class="text-xs font-semibold mb-2">Python: Build AI</h3>
-              <img
-                src="./img/python.jpg"
-                alt="Previous Post Image 1"
-                class="w-full h-24 object-cover rounded-lg mb-2"
-              />
-              <p class="text-xs text-gray-700">
-                Unlocking the secrets of AI chatbots
-              </p>
-            </div>
-            <div class="bg-white rounded-lg shadow-md p-4">
-              <h3 class="text-xs font-semibold mb-2">
-                Open-source Tools/Software: Never gone in the market
-              </h3>
-              <img
-                src="./img/open-source.jpg"
-                alt="Previous Post Image 1"
-                class="w-full h-24 object-cover rounded-lg mb-2"
-              />
-              <p class="text-xs text-gray-700">
-                Lucky we have community which aims to help each other
-              </p>
-            </div>
-            <div class="bg-white rounded-lg shadow-md p-4">
-              <h3 class="text-xs font-semibold mb-2">
-                Coffee, Dopamine, and Your Brain
-              </h3>
-              <img
-                src="./img/cdb.png"
-                alt="Previous Post Image 1"
-                class="w-full h-24 object-cover rounded-lg mb-2"
-              />
-              <p class="text-xs text-gray-700">
-                Learn to hack your brain like coding
-              </p>
+              <a
+                href="./git-blog/gameVsLife.html"
+                class="inline-block text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors"
+              >
+                Continue Reading
+              </a>
             </div>
           </div>
         </div>
       </div>
-    </div>
+
+      <!-- Blog Grid Section -->
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 border-b pb-2">Latest Articles</h2>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- Blog Card 1 -->
+        <a href="./git-blog/llama4_blog.html" class="block blog-card h-full">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden h-full hover:shadow-lg transition-all">
+            <div class="image-container">
+              <img
+                src="./img/llama4.jpeg"
+                alt="LLaMA 4 AI Model"
+                class="w-full"
+              />
+            </div>
+            <div class="p-4">
+              <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mb-2">AI</span>
+              <h3 class="text-sm font-semibold mb-2 text-gray-800">
+                LLaMA 4: Open-Source AI Revolution
+              </h3>
+              <p class="text-xs text-gray-600">
+                Smarter, faster, and open-source—experience next-gen AI.
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <!-- Blog Card 2 -->
+        <a href="#" class="block blog-card h-full">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden h-full hover:shadow-lg transition-all">
+            <div class="image-container">
+              <img
+                src="./img/tailwind.jpg"
+                alt="Tailwind CSS"
+                class="w-full"
+              />
+            </div>
+            <div class="p-4">
+              <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mb-2">CSS</span>
+              <h3 class="text-sm font-semibold mb-2 text-gray-800">
+                Tailwind CSS: Utility-First Design
+              </h3>
+              <p class="text-xs text-gray-600">
+                Rapidly build modern websites without leaving your HTML.
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <!-- Blog Card 3 -->
+        <a href="#" class="block blog-card h-full">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden h-full hover:shadow-lg transition-all">
+            <div class="image-container">
+              <img
+                src="./img/html-css.jpg"
+                alt="HTML and CSS"
+                class="w-full"
+              />
+            </div>
+            <div class="p-4">
+              <span class="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full mb-2">Basics</span>
+              <h3 class="text-sm font-semibold mb-2 text-gray-800">
+                HTML & CSS: Web Foundations
+              </h3>
+              <p class="text-xs text-gray-600">
+                The essential building blocks of every website.
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <!-- Blog Card 4 -->
+        <a href="#" class="block blog-card h-full">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden h-full hover:shadow-lg transition-all">
+            <div class="image-container">
+              <img
+                src="./img/JavaScript.png"
+                alt="JavaScript"
+                class="w-full"
+              />
+            </div>
+            <div class="p-4">
+              <span class="inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full mb-2">JS</span>
+              <h3 class="text-sm font-semibold mb-2 text-gray-800">
+                JavaScript: The Language of Web
+              </h3>
+              <p class="text-xs text-gray-600">
+                Add interactivity and dynamic features to your sites.
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <!-- Blog Card 5 -->
+        <a href="#" class="block blog-card h-full">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden h-full hover:shadow-lg transition-all">
+            <div class="image-container">
+              <img
+                src="./img/python.jpg"
+                alt="Python"
+                class="w-full"
+              />
+            </div>
+            <div class="p-4">
+              <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full mb-2">Python</span>
+              <h3 class="text-sm font-semibold mb-2 text-gray-800">
+                Python: From Basics to AI
+              </h3>
+              <p class="text-xs text-gray-600">
+                Versatile language powering modern applications.
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <!-- Blog Card 6 -->
+        <a href="#" class="block blog-card h-full">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden h-full hover:shadow-lg transition-all">
+            <div class="image-container">
+              <img
+                src="./img/open-source.jpg"
+                alt="Open Source"
+                class="w-full"
+              />
+            </div>
+            <div class="p-4">
+              <span class="inline-block bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full mb-2">Community</span>
+              <h3 class="text-sm font-semibold mb-2 text-gray-800">
+                Open-Source: Collaborative Future
+              </h3>
+              <p class="text-xs text-gray-600">
+                How community-driven development is changing tech.
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <!-- Blog Card 7 -->
+        <a href="#" class="block blog-card h-full">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden h-full hover:shadow-lg transition-all">
+            <div class="image-container">
+              <img
+                src="./img/cdb.png"
+                alt="Coffee and Dopamine"
+                class="w-full"
+              />
+            </div>
+            <div class="p-4">
+              <span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full mb-2">Neuroscience</span>
+              <h3 class="text-sm font-semibold mb-2 text-gray-800">
+                Coffee, Dopamine & Productivity
+              </h3>
+              <p class="text-xs text-gray-600">
+                How caffeine affects your brain's chemistry and output.
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <!-- Blog Card 8 -->
+        <a href="#" class="block blog-card h-full">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden h-full hover:shadow-lg transition-all">
+            <div class="image-container">
+              <img
+                src="./img/procrastination.jpeg"
+                alt="Procrastination"
+                class="w-full"
+              />
+            </div>
+            <div class="p-4">
+              <span class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full mb-2">Productivity</span>
+              <h3 class="text-sm font-semibold mb-2 text-gray-800">
+                Beating Procrastination
+              </h3>
+              <p class="text-xs text-gray-600">
+                Neuroscience-backed strategies to get things done.
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Newsletter Section -->
+      <div class="mt-16 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 max-w-4xl mx-auto">
+        <div class="text-center">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Stay Updated</h3>
+          <p class="text-gray-600 mb-6 max-w-lg mx-auto">
+            Join my newsletter for weekly tech insights, productivity hacks, and neuroscience findings.
+          </p>
+          <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+            <input 
+              type="email" 
+              placeholder="Your email address" 
+              class="flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            >
+            <button 
+              type="submit" 
+              class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer id="contact" class="bg-slate-700 text-white py-12 mt-16">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between">
+          <div class="mb-8 md:mb-0">
+            <h3 class="text-xl font-bold mb-4">Mind Hacks</h3>
+            <p class="text-slate-300 max-w-md">
+              Exploring the intersection of technology, neuroscience, and productivity to help you work smarter.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-8">
+            <div>
+              <h4 class="font-semibold mb-4">Quick Links</h4>
+              <ul class="space-y-2">
+                <li><a href="./index.html" class="text-slate-300 hover:text-white transition-colors">Home</a></li>
+                <li><a href="./git-blog/index.html" class="text-slate-300 hover:text-white transition-colors">Blog</a></li>
+                <li><a href="#" class="text-slate-300 hover:text-white transition-colors">About</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-4">Connect</h4>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-slate-300 hover:text-white transition-colors">Twitter</a></li>
+                <li><a href="#" class="text-slate-300 hover:text-white transition-colors">GitHub</a></li>
+                <li><a href="#" class="text-slate-300 hover:text-white transition-colors">LinkedIn</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-slate-600 mt-8 pt-8 text-center text-slate-400">
+          <p>© 2023 Mind Hacks. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
